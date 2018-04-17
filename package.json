@@ -1,6 +1,6 @@
 {
   "name": "braingame_project_alietta",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/alietta/project-lvl1-s256#readme",
   "dependencies": {
-    "colors": "*"
+    "colors": "*",
+    "readline-sync": "*"
   },
   "devDependencies": {
     "canvas-chart": "~1.3.0",
