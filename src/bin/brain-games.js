@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import {getPlayerName} from '..'
-var colors = require('colors');
+import { getPlayerName } from '..';
 
-console.log('Welcome,'.magenta + ' to the ' + 'Brain'.bold.black + ' Games!');
-console.log('Hello, ' + `${getPlayerName()}`.bold.black + '!');
+console.log('Welcome to the Brain Games!');
+console.log(`Hello, ${getPlayerName()}`);
