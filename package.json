@@ -1,6 +1,6 @@
 {
   "name": "braingame_project_alietta",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/alietta/project-lvl1-s256#readme",
   "dependencies": {
-    "colors": "*",
+    "lodash": "*",
     "readline-sync": "*"
   },
   "devDependencies": {
@@ -46,7 +46,8 @@
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "files": [
     "dist"
