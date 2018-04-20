@@ -1,31 +1,16 @@
 import game from '../component/brain_game';
-import getRandomArr from '../component/prepare_data';
+import randomInt from '../component/prepare_data';
 
-const arr = getRandomArr(3, 2, 1, 10);
-const quiz = arr.reduce((acc, [a, b], i) => {
-  if (i === 0) {
-    acc.push({
-      question: `${a} + ${b}`,
-      answer: a + b,
-    });
-  } else if (i === 1) {
-    acc.push({
-      question: `${a} - ${b}`,
-      answer: a - b,
-    });
-  } else {
-    acc.push({
-      question: `${a} * ${b}`,
-      answer: a * b,
-    });
-  }
-  return acc;
-}, []);
+const math = require('mathjs');
 
-const opt = {
-  taskText: 'What is the result of the expression?',
-  quiz,
+game.setTask('What is the result of the expression?');
+game.questionRule = () => {
+  const operations = ['+', '-', '*'];
+  const index = randomInt(0, operations.length - 1);
+  return `${randomInt(1, 10)} ${operations[index]} ${randomInt(1, 10)}`;
 };
+game.answerRule = question => `${math.eval(question)}`;
+game.setRounds(3);
 export default () => {
-  game.start(opt);
+  game.start();
 };

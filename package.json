@@ -1,6 +1,6 @@
 {
   "name": "braingame_project_alietta",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/alietta/project-lvl1-s256#readme",
   "dependencies": {
     "lodash": "*",
+    "mathjs": "^4.1.2",
     "readline-sync": "*"
   },
   "devDependencies": {
