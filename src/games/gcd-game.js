@@ -5,10 +5,24 @@ import randomInt from '../component/prepare_data';
 const math = require('mathjs');
 
 const task = 'Find the greatest common divisor of given numbers.';
+
+const gcd = (num1, num2) => {
+  let a = num1;
+  let b = num2;
+  while (a !== 0 && b !== 0) {
+    if (a > b) {
+      a %= b;
+    } else {
+      b %= a;
+    }
+  }
+  return a + b;
+};
 const gameRule = () => {
-  const question = `${randomInt(1, 100)} ${randomInt(1, 100)}`;
-  const [a, b] = question.split(' ').map(q => parseInt(q, 10));
-  const rightAnswer = `${math.gcd(a, b)}`;
+  const a = randomInt(1, 100);
+  const b = randomInt(1, 100);
+  const question = `${a} ${b}`;
+  const rightAnswer = `${gcd(a, b)}`;
   return cons(question, rightAnswer);
 };
 export default () => {
