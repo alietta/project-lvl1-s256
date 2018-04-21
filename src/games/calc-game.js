@@ -1,16 +1,17 @@
-import game from '../component/brain_game';
+import { cons } from 'hexlet-pairs';
+import playGame from '../component/brain_game';
 import randomInt from '../component/prepare_data';
 
 const math = require('mathjs');
 
-game.setTask('What is the result of the expression?');
-game.questionRule = () => {
+const task = 'What is the result of the expression?';
+const gameRule = () => {
   const operations = ['+', '-', '*'];
   const index = randomInt(0, operations.length - 1);
-  return `${randomInt(1, 10)} ${operations[index]} ${randomInt(1, 10)}`;
+  const question = `${randomInt(1, 10)} ${operations[index]} ${randomInt(1, 10)}`;
+  const rightAnswer = `${math.eval(question)}`;
+  return cons(question, rightAnswer);
 };
-game.answerRule = question => `${math.eval(question)}`;
-game.setRounds(3);
 export default () => {
-  game.start();
+  playGame(task, gameRule);
 };

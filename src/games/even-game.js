@@ -1,10 +1,14 @@
-import game from '../component/brain_game';
+import { cons } from 'hexlet-pairs';
+import playGame from '../component/brain_game';
 import randomInt from '../component/prepare_data';
 
-game.setTask('Answer "yes" if number even otherwise answer "no".');
-game.questionRule = () => randomInt();
-game.answerRule = question => (question % 2 === 0 ? 'yes' : 'no');
-game.setRounds(3);
+const task = 'Answer "yes" if number even otherwise answer "no".';
+const gameRule = () => {
+  const question = randomInt();
+  const rightAnswer = question % 2 === 0 ? 'yes' : 'no';
+  return cons(question, rightAnswer);
+};
+
 export default () => {
-  game.start();
+  playGame(task, gameRule);
 };
