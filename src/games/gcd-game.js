@@ -2,8 +2,6 @@ import { cons } from 'hexlet-pairs';
 import playGame from '../component/brain_game';
 import randomInt from '../component/prepare_data';
 
-const math = require('mathjs');
-
 const task = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (num1, num2) => {
