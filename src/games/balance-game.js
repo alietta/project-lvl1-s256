@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
-import playGame from '../component/brain_game';
-import randomInt from '../component/prepare_data';
+import playGame from '..';
+import randomInt from '../helpers';
 
 const task = 'Balance the given number.';
 const gameRule = () => {

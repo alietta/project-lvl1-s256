@@ -1,7 +1,7 @@
 import { cons } from 'hexlet-pairs';
 import { _ } from 'lodash';
-import playGame from '../component/brain_game';
-import randomInt from '../component/prepare_data';
+import playGame from '..';
+import randomInt from '../helpers';
 
 const task = 'What number is missing in this progression?';
 const progLen = 10;

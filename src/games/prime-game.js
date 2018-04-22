@@ -1,14 +1,14 @@
 import { cons } from 'hexlet-pairs';
-import playGame from '../component/brain_game';
-import randomInt from '../component/prepare_data';
+import playGame from '..';
+import randomInt from '../helpers';
 
 const task = 'Is this number prime?';
 const isPrime = (num) => {
   let div = 2;
-  while (num % div !== 0) {
+  while (num % div !== 0 && num > 1) {
     div += 1;
   }
-  return div === num;
+  return div === num && num > 1;
 };
 const gameRule = () => {
   const num = randomInt(1, 100);

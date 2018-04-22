@@ -27,3 +27,4 @@ rules:
      },
   ]
   no-else-return: 0
+  no-confusing-arrow: 0
